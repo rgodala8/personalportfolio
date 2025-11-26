@@ -27,8 +27,8 @@ export default function TechStack() {
         transition={{ duration: 0.6 }}
       >
         <div className="flex items-center gap-4 mb-12">
-          <span className="text-2xl">✦</span>
-          <h2 className="text-4xl font-bold">Tech Stack</h2>
+          <span className="text-2xl text-purple-400">✦</span>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-[#800020] bg-clip-text text-transparent">Tech Stack</h2>
         </div>
         <div className="flex flex-wrap gap-4">
           {technologies.map((tech, index) => (
@@ -39,7 +39,7 @@ export default function TechStack() {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               whileHover={{ scale: 1.1 }}
-              className="px-6 py-3 bg-gray-900 rounded-lg border border-gray-800 hover:border-gray-600 transition-colors"
+              className="px-6 py-3 bg-gradient-to-r from-purple-900/50 to-[#800020]/50 rounded-lg border border-purple-600/50 hover:border-purple-400 hover:bg-gradient-to-r hover:from-purple-800/70 hover:to-[#5C0015]/70 transition-all"
             >
               <span className="text-lg">{tech}</span>
             </motion.div>

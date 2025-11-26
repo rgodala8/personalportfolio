@@ -16,7 +16,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 pt-32">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent"
+          className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-purple-600 to-[#800020] bg-clip-text text-transparent"
         >
           Ritya Godala
         </motion.h1>
@@ -36,7 +36,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-2xl md:text-4xl text-gray-400 mb-8 h-12"
+          className="text-2xl md:text-4xl text-purple-300 mb-8 h-12"
         >
           <span className="inline-block">
             {roles[currentRole]}
@@ -49,7 +49,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.6 }}
           href="/resume.pdf"
           download
-          className="inline-block px-8 py-3 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition-colors"
+          className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 to-[#800020] text-white rounded-lg font-semibold hover:from-purple-700 hover:to-[#5C0015] transition-all shadow-lg shadow-purple-500/50"
         >
           Download Resume
         </motion.a>

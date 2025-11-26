@@ -12,8 +12,8 @@ export default function About() {
         transition={{ duration: 0.6 }}
       >
         <div className="flex items-center gap-4 mb-8">
-          <span className="text-2xl">✦</span>
-          <h2 className="text-4xl font-bold">About</h2>
+          <span className="text-2xl text-purple-400">✦</span>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-[#800020] bg-clip-text text-transparent">About</h2>
         </div>
         <p className="text-lg text-gray-300 leading-relaxed">
           Hi, I'm Ritya! I'm a passionate software engineer and developer with a keen interest 

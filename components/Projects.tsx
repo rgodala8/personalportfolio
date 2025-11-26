@@ -35,8 +35,8 @@ export default function Projects() {
         transition={{ duration: 0.6 }}
       >
         <div className="flex items-center gap-4 mb-12">
-          <span className="text-2xl">✦</span>
-          <h2 className="text-4xl font-bold">Projects</h2>
+          <span className="text-2xl text-purple-400">✦</span>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-[#800020] bg-clip-text text-transparent">Projects</h2>
         </div>
         <div className="space-y-6">
           {projects.map((project, index) => (
@@ -50,13 +50,13 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ x: 10 }}
-              className="block p-6 bg-gray-900 rounded-lg border border-gray-800 hover:border-gray-600 transition-all group"
+              className="block p-6 bg-gradient-to-r from-purple-900/30 to-[#800020]/30 rounded-lg border border-purple-600/50 hover:border-purple-400 hover:bg-gradient-to-r hover:from-purple-800/50 hover:to-[#5C0015]/50 transition-all group shadow-lg shadow-purple-900/20"
             >
-              <h3 className="text-2xl font-semibold mb-2 group-hover:text-white transition-colors">
+              <h3 className="text-2xl font-semibold mb-2 group-hover:text-purple-300 transition-colors bg-gradient-to-r from-purple-300 to-[#B00030] bg-clip-text text-transparent">
                 {project.title}
               </h3>
               <p className="text-gray-400">{project.description}</p>
-              <span className="text-sm text-gray-500 mt-2 inline-block group-hover:text-gray-400">
+              <span className="text-sm text-purple-400 mt-2 inline-block group-hover:text-purple-300">
                 Click to view →
               </span>
             </motion.a>

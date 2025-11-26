@@ -30,8 +30,8 @@ export default function Experience() {
         transition={{ duration: 0.6 }}
       >
         <div className="flex items-center gap-4 mb-12">
-          <span className="text-2xl">✦</span>
-          <h2 className="text-4xl font-bold">Experience</h2>
+          <span className="text-2xl text-purple-400">✦</span>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-[#800020] bg-clip-text text-transparent">Experience</h2>
         </div>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
@@ -41,7 +41,7 @@ export default function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="border-l-2 border-gray-700 pl-6"
+              className="border-l-2 border-purple-600 pl-6 hover:border-purple-400 transition-colors"
             >
               <h3 className="text-2xl font-semibold mb-1">{exp.title}</h3>
               <p className="text-xl text-gray-400 mb-2">{exp.company}</p>
