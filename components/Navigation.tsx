@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 const navItems = [
   { name: 'About', href: '#about' },
@@ -18,8 +19,10 @@ export default function Navigation() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll)
+      return () => window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   return (
@@ -35,27 +38,22 @@ export default function Navigation() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <motion.a
+          <Link
             href="#"
             className="text-xl font-bold bg-gradient-to-r from-purple-400 to-[#800020] bg-clip-text text-transparent"
-            whileHover={{ scale: 1.05 }}
           >
             Ritya Godala
-          </motion.a>
+          </Link>
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item, index) => (
-              <motion.a
+              <Link
                 key={item.name}
                 href={item.href}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-gray-300 hover:text-purple-400 transition-colors relative group"
-                whileHover={{ scale: 1.1 }}
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-[#800020] group-hover:w-full transition-all duration-300"></span>
-              </motion.a>
+              </Link>
             ))}
           </div>
         </div>
